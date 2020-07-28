@@ -1,11 +1,44 @@
 .App {
-  text-align: center;
+  /* text-align: center; */
  font-style: italic;
  font-weight: bolder;
- font-size: 25px;
+ font-size: 20px;
  color: rgb(192, 169, 39);
- /* min-width: 800px; */
+ /* min-height: 100vh; */
+ /* overflow: hidden; */
+ /* align-content: center; */
+}
+::-webkit-scrollbar{
+  overflow: hidden;
+  background-color:  rgb(99, 99, 99);
+
+}
+.row{
+  justify-content: center;
+  margin-top: 5px;
+  border: 2px solid;
+  margin: auto;
+}
+.register{
+  justify-content: center;
+  /* margin-left: 5px; */
+
 }
 
+.errors{
+  color: rgb(24, 206, 18);
+  font-size: large;
+  font-weight: bold;
+}
+
+.btn{
+  box-shadow: none !important;
+}
+
+input{
+  box-shadow:none !important;
+  border:1px solid #ccc !important;
+
+  }
 
 
