@@ -1,20 +1,22 @@
 import React, { useState} from 'react'
 import RegistrationForm from '../components/formpages/RegistrationForm'
 import { useHistory } from 'react-router-dom'
+import { useDispatch } from 'react-redux'
+import { setStudentData} from '../store/authenticate/action'
 
-const registerPage = () => {
+
+const RegisterPage = () => {
 
 
     const [error,setError] = useState('')
     const history = useHistory()
+    const dispatch = useDispatch()
 
     
     
     // submitting the data from the child component (login form)
 
     const handleSubmit = (data) => {
-        console.log(data)
-        // save the data in the local storage
         const studentAccount = localStorage.getItem('accounts')
         if(!studentAccount){
             localStorage.setItem('accounts', JSON.stringify([]))
@@ -29,19 +31,16 @@ const registerPage = () => {
             setError('')
            history.push('/profile')
            localStorage.setItem('accounts', JSON.stringify([...studentData,data]))
-
+           dispatch(setStudentData(data))
         }
-
     }
 
 
     return (
         <div className='register col-12'>
-            <h1 className ='text-center'>register page</h1>
-            <p />
-            <RegistrationForm handleSubmit={handleSubmit}  />
+            <RegistrationForm handleSubmit={handleSubmit} error={error}  />
         </div>
     )
 }
 
-export default registerPage
+export default RegisterPage

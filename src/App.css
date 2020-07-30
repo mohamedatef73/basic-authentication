@@ -1,35 +1,31 @@
 .App {
-  /* text-align: center; */
  font-style: italic;
  font-weight: bolder;
  font-size: 20px;
  color: rgb(192, 169, 39);
- /* min-height: 100vh; */
- /* overflow: hidden; */
- /* align-content: center; */
-}
-::-webkit-scrollbar{
-  overflow: hidden;
-  background-color:  rgb(99, 99, 99);
-
 }
 .row{
   justify-content: center;
-  margin-top: 5px;
-  border: 2px solid;
-  margin: auto;
-}
-.register{
-  justify-content: center;
-  /* margin-left: 5px; */
+  min-height: 100vh;
+  align-items: center;
+  margin-right: 5px;
+  background-image:url('https://lh3.googleusercontent.com/proxy/4tSyPpit-oAr15alEy_otmCP1rNAj1hAKy6jAkjfwv-vxk_-zytwG4Sh3jgIiZ4XJSitGS9XlPlrjXNNnZV2h4LLnL7CJFT6i90X-v3s8XFK0qG8tKmtmhYBpaTlJdTto8ubYFuZt-R9');
+  background-size: cover;
 
+}
+.home{
+  font-size: 30px;
 }
 
 .errors{
-  color: rgb(24, 206, 18);
+  color: rgb(247, 1, 1);
   font-size: large;
   font-weight: bold;
 }
+label{
+  color: rgb(251, 246, 255);
+  font-weight: bolder;
+ }
 
 .btn{
   box-shadow: none !important;
@@ -38,7 +34,51 @@
 input{
   box-shadow:none !important;
   border:1px solid #ccc !important;
-
   }
 
+  .login{
+     display: flex;
+     flex-direction: column-reverse;
+     background-color:rgb(19, 104, 119); 
+     min-width: 100%vh;
+     min-height:100vh;
+     background-size:100% auto;
+     background-repeat:no-repeat;
+     background-image: url(https://www.jacaranda.com.au/wp-content/uploads/2019/05/studyon_header_20161.jpg);
+    }
+  .register{
+    min-width: 100%vh;
+    min-height:100vh;
+    background-size:100% auto;
+    background-repeat:no-repeat;
+    background-image: url(https://previews.123rf.com/images/tortoon/tortoon1705/tortoon170500124/79262920-woman-hand-writing-note-pad-on-wood-table-in-coffee-shop-.jpg);
+    background-size: cover;
+    overflow-x: hidden;
+    scroll-behavior: auto;
+  }
+
+    
+  .profile{
+    
+    background-image: url(https://prmceam.ac.in/wp-content/uploads/2015/03/background-learner1.jpg);
+    background-color: saddlebrown;
+    min-height: 100vh;
+    align-items: center;
+    color: rgb(156, 29, 29);
+    font-weight: bolder;
+    text-align:center;
+  }
+
+  .name{
+    color: rgb(184, 11, 11);
+  }
+  .result{
+    background-image:url('https://lh3.googleusercontent.com/proxy/4tSyPpit-oAr15alEy_otmCP1rNAj1hAKy6jAkjfwv-vxk_-zytwG4Sh3jgIiZ4XJSitGS9XlPlrjXNNnZV2h4LLnL7CJFT6i90X-v3s8XFK0qG8tKmtmhYBpaTlJdTto8ubYFuZt-R9');
+      margin-left: 5px;
+  }
+
+::-webkit-scrollbar{
+  overflow: hidden;
+  background-color: rgb(0, 0, 0);
+}
 

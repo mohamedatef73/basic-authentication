@@ -1,6 +1,7 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import InputForm from '../inputs/inputForm'
 import { Link, useHistory } from 'react-router-dom'
+
 
 const RegistrationForm = (props) => {
     // setting the state for the inputs using useState
@@ -29,17 +30,18 @@ const RegistrationForm = (props) => {
     }
 
     const isEmail = () => {
-        if (email.length < 2) {
-            setEmailError('this incrrect email')
-            return false
-        } else {
+        if ( email.length > 6 || email === '@'){
             setEmailError('')
             return true
+        } else {
+            setEmailError('this incrrect email')
+            return false
+
         }
     }
 
     const isAge = () => {
-        if (age.length <= 16 || age.length > 20) {
+            if (age <= 15 || age > 20){
             setAgeErr('this is not the correct age')
             return false
         } else {
@@ -69,7 +71,7 @@ const RegistrationForm = (props) => {
     }
 
 
-     // submitting the validate data to the parent component and move to the profile page
+    // submitting the validate data to the parent component and move to the profile page
 
     const history = useHistory()
 
@@ -94,11 +96,18 @@ const RegistrationForm = (props) => {
         }
     }
 
-    
+    useEffect(() => {
+        if (props.error) {
+            setEmailError(props.error)
+        }
+    }, [props.error, emailErr])
+
+
+
 
 
     return (
-        <div>
+        <div className='mt-4'>
             <label>Name :</label>
             <InputForm type='text' placeholder='type your name' value={name}
                 handleChange={setName} errors={nameErr} />
@@ -108,7 +117,7 @@ const RegistrationForm = (props) => {
                 handleChange={setEmail} errors={emailErr} />
 
             <label>Age :</label>
-            <InputForm type='text' placeholder='type your Age' value={age}
+            <InputForm type='number' placeholder='type your Age' value={age}
                 handleChange={setAge} errors={ageErr} />
 
 
@@ -125,7 +134,7 @@ const RegistrationForm = (props) => {
             <div className='col-lg-6 col-sm-12'>
                 <button className='btn btn-warning mb-1'
                     onClick={validateData}>register</button>
-                    
+
                 <Link to='/login'>
                     <button className='btn btn-warning float-right'>Already have one !</button>
                 </Link>

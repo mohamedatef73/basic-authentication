@@ -1,6 +1,6 @@
 body {
-  min-height: 100vh;
-  margin: 0;
-  background-image: linear-gradient(to right, rgb(83, 81, 81) , rgb(99, 99, 99));
+  /* background-image: linear-gradient(to right, rgb(83, 81, 81) , rgb(99, 99, 99)); */
+  background-image:url('https://cbimg6.com/graphics/09/09/75422b.jpg');
+  background-size: cover;
 }
 

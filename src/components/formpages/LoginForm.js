@@ -47,23 +47,22 @@ const LoginForm = (props) => {
                 email,
                 password
             }
-            history.push('/profile')
+            // history.push('/profile')
             props.handleSubmit(data)
 
         }
     }
 
     useEffect(() =>{
-        if(props.error){
-            setEmailErr(props.error)
+        if(props.backendError){
+            setEmailErr(props.backendError)
         }
-    },[props.error,setEmailErr])
+    },[props.backendError, emailErr])
 
 
     return (
-        <div>
-            <h1>Welcome Again ...</h1>
-
+        <div className=''>
+            
             <label>Email :</label>
             <InputForm type='email' placeholder='please type your email'
                 value={email} errors={emailErr}
@@ -76,7 +75,7 @@ const LoginForm = (props) => {
                 handleChange={setPassword} />
             <br />
 
-            <button className='btn btn-warning'
+            <button className='btn btn-warning ml-5'
                 onClick={validateData}>Login to the profile</button>
 
         </div>
