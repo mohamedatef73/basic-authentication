@@ -73,7 +73,6 @@ const RegistrationForm = (props) => {
 
     // submitting the validate data to the parent component and move to the profile page
 
-    const history = useHistory()
 
     const validateData = () => {
         const validateName = isName()
@@ -92,7 +91,6 @@ const RegistrationForm = (props) => {
                 confirmPassword
             }
             props.handleSubmit(data)
-            history.push('/profile')
         }
     }
 

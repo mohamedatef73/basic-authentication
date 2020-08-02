@@ -5,10 +5,10 @@ const HomePage = () => {
     return (
         <div className='row col-12 ml-0'>
                 <div className='home col-4 text-center'>
-                    <Link to='/register'> register </Link>
+                    <Link className='text-danger' to='/register'> register </Link>
                 </div>
                 <div className='home col-4 text-center'>
-                    <Link to='/Login'> Login </Link>
+                    <Link className='text-warning'  to='/Login'> Login </Link>
                 </div>
         </div>
     )

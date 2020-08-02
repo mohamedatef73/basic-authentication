@@ -12,14 +12,11 @@ const LoginPage = () => {
      
 
     // submitting the data from the child component (login form)
- 
     const handleSubmit = (data) => {
-
         const studentAccount = localStorage.getItem('accounts')
         if (!studentAccount) {
             setError('u need to creat email first')
         } else {
-
             const studentData = JSON.parse(localStorage.getItem('accounts'))
             const emailExist = studentData.find(student => student.email === data.email)
             if (emailExist !== undefined && emailExist.password === data.password) {
@@ -34,8 +31,8 @@ const LoginPage = () => {
         }
     }
     return (
-        <div className='login col-12 '>
-            <div className='col-lg-12 pb-4 mb-5'>
+        <div className='login col-12'>
+            <div className='col-lg-12 pb-5'>
                 <LoginForm handleSubmit={handleSubmit} backendError={error} />
             </div>
         </div>

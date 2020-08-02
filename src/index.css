@@ -1,6 +1,4 @@
 body {
-  /* background-image: linear-gradient(to right, rgb(83, 81, 81) , rgb(99, 99, 99)); */
-  background-image:url('https://cbimg6.com/graphics/09/09/75422b.jpg');
-  background-size: cover;
+  background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #344709);
 }
 
