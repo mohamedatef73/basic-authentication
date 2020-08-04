@@ -108,26 +108,26 @@ const RegistrationForm = (props) => {
         <div className='mt-4'>
             <label>Name :</label>
             <InputForm type='text' placeholder='type your name' value={name}
-                handleChange={setName} errors={nameErr} />
+                handleChange={setName} errors={nameErr} resetError={setNameErr}  />
 
             <label>Email :</label>
             <InputForm type='email' placeholder='type your email' value={email}
-                handleChange={setEmail} errors={emailErr} />
+                handleChange={setEmail} errors={emailErr} resetError={setEmailError}  />
 
             <label>Age :</label>
             <InputForm type='number' placeholder='type your Age' value={age}
-                handleChange={setAge} errors={ageErr} />
-
+                handleChange={setAge} errors={ageErr} resetError={setAgeErr}  />
+  
 
             <label>Password :</label>
             <InputForm type='password' placeholder='type the password'
                 value={password}
-                handleChange={setPassword} errors={passwordErr} />
+                handleChange={setPassword} errors={passwordErr} resetError={setPasswordErr}  />
 
             <label>Confirm Password :</label>
             <InputForm type='password' placeholder='confirm the password'
                 value={confirmPassword}
-                handleChange={setConfirmPassword} errors={confirmPasswordErr} />
+                handleChange={setConfirmPassword} errors={confirmPasswordErr} resetError={setConfirmPasswordErr}  />
             <br />
             <div className='col-lg-6 col-sm-12'>
                 <button className='btn btn-warning mb-1'

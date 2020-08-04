@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import InputForm from '../inputs/inputForm'
-import { useHistory } from 'react-router-dom'
 
 const LoginForm = (props) => {
 
@@ -8,6 +7,7 @@ const LoginForm = (props) => {
 
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
+
     // setting the errors state
 
     const [emailErr, setEmailErr] = useState('')
@@ -35,9 +35,9 @@ const LoginForm = (props) => {
             return true
         }
     }
+    
     // submitting the validate data to the parent component and move to the profile page
 
-    const history = useHistory()
 
     const validateData = () => {
         const validatEmail = isEmail()
@@ -47,7 +47,6 @@ const LoginForm = (props) => {
                 email,
                 password
             }
-            // history.push('/profile')
             props.handleSubmit(data)
 
         }
@@ -66,13 +65,13 @@ const LoginForm = (props) => {
             <label>Email :</label>
             <InputForm type='email' placeholder='please type your email'
                 value={email} errors={emailErr}
-                handleChange={setEmail} />
+                handleChange={setEmail} resetError={setEmailErr} />
             <br />
 
             <label>Password :</label>
             <InputForm type='password' placeholder='please type your password'
                 value={password} errors={passwordErr}
-                handleChange={setPassword} />
+                handleChange={setPassword} resetError={setPasswordErr}/>
             <br />
 
             <button className='btn btn-warning ml-5'

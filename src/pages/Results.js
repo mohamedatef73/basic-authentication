@@ -20,13 +20,12 @@ const ResultPage = () => {
             <div className='result'>
             <br />
 
-           <h1 className='text-center'> <Link className=' text-primary' to='/home'>Home Page</Link></h1>
+           <h1 className='text-center'><Link className=' text-primary' to='/home'>Home Page</Link></h1>
 
             <ResultForm />
             <ul>
                 {
-                    results.map(result => <li key={result.id}>
-                        {result.title}</li>
+                    results.slice(0,5).map(result =><li key={result.id}>{(result.title)}</li>
                     )}
             </ul>
             </div>
