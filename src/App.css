@@ -78,7 +78,6 @@ input{
 
 ::-webkit-scrollbar{
   overflow: hidden;
-  background-color: #344709;
 }
 h2{
   color: orangered;
