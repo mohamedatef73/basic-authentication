@@ -17,7 +17,7 @@ const ProfilePage = () => {
             body: JSON.stringify({
                 title: 'The Result is',
                 body: 'Accepted',
-                id:1
+                id:2
             }),
             headers: {
                 "Content-type": "application/json; charset=UTF-8"
@@ -30,7 +30,7 @@ const ProfilePage = () => {
 
     return (
         <div className='profile col-12'>
-            <div className='home text-center'>
+            <div className='home'>
                 <br /><br /><br />
                 <h1> welcome <br />
                     <span className='name'> {student.name}</span></h1>
